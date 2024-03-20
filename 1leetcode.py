@@ -8,7 +8,7 @@ def TwoSum(nums, target):
     return None
 
 
-nums = [3, 2, 4]
+nums = [3, 2, 3]
 target = 6
 
 TwoSum(nums=nums, target=target)

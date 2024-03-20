@@ -35,4 +35,3 @@ result = addTwoNumbers(l1, l2)
 while result:
     print(result.val, end=" ")
     result = result.next
-cv

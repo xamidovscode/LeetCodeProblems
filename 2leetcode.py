@@ -3,6 +3,7 @@ class ListNode:
         self.val = val
         self.next = next
 
+
 def addTwoNumbers(l1, l2):
     result_head = ListNode(0)
     current = result_head

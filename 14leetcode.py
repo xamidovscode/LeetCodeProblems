@@ -1,21 +1,14 @@
 def longestCommonPrefix(strs):
     if not strs:
         return ""
-
-    min_length = len(min(strs, key=len))
-
-    prefix = ""
-
-    for i in range(min_length):
-        char = strs[0][i]
-
-        if all(s[i] == char for s in strs):
-            prefix += char
-        else:
-            break
-    print(prefix)
-    return prefix
+    s = strs[0]
+    for j in strs[1:]:
+        while j.find(s) != 0:
+            s = s[:-1]
+            if not s:
+                return ""
+    return s
 
 
-strs = ["dog", "racecar", "car"]
+strs = ["flower", "flow", "flight"]
 longestCommonPrefix(strs)

@@ -1,4 +1,4 @@
-x = 'salom'
-y = 'salomlar'
+x = 'hello'
 
-print(x.find(y))
+print(x[2:len(x)])
+

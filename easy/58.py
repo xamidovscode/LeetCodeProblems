@@ -7,7 +7,6 @@ class Solution(object):
         return len(s.split()[-1])
 
 
-
 obj = Solution()
 function = obj.lengthOfLastWord("   fly me   to   the moon  ")
 

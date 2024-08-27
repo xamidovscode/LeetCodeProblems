@@ -1,4 +1,4 @@
-x = 'hello'
+a = [1,2,2,3,4]
 
-print(x[2:len(x)])
+print(a.index(2))
 

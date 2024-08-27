@@ -1,25 +1,27 @@
+from django.contrib.sitemaps.views import index
+
+
 class Solution(object):
     @classmethod
-    def removeDuplicates(cls, nums):
+    def remove_duplicates(cls, nums):
         """
         :type nums: List[int]
         :rtype: int
         """
         duplicate = []
         k = 0
-        for i in nums:
-            ind = nums.index(i)
-            if i not in duplicate:
-                duplicate.append(i)
+        for ind, value in enumerate(nums):
+            if value not in duplicate:
+                duplicate.append(value)
                 k += 1
             else:
-                nums.pop(ind)
+                nums[ind:ind + 1] = ["p"]
 
         return nums
 
 
 obj = Solution()
-function = obj.removeDuplicates([1, 1, 1, 2, 3])
+function = obj.remove_duplicates([1, 1, 1, 2, 3])
 
 print(function)
 

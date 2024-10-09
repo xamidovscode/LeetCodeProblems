@@ -6,8 +6,6 @@ class Solution(object):
         :type l2: ListNode
         :rtype: ListNode
         """
-        print(l1)
-        print(l2)
 
 
 

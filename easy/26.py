@@ -10,15 +10,15 @@ class Solution(object):
         """
         unique = []
         i = 0
-        poped = 0
+        count = 0
         print("F", nums)
         while i <= len(nums) - 1:
             element = nums[i]
             if element not in unique:
                 unique.append(element)
             else:
-                nums.pop(i - poped)
-                poped += 1
+                nums.pop(i - count)
+                count += 1
                 print(i, nums)
             i += 1
         return i, unique, nums

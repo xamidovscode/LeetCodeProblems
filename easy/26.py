@@ -8,20 +8,22 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        duplicate = []
-        k = 0
-        for ind, value in enumerate(nums):
-            if value not in duplicate:
-                duplicate.append(value)
-                k += 1
+        unique = []
+        i = 0
+        print("First", nums)
+        while i <= len(nums) - 1:
+            element = nums[i]
+            if element not in unique:
+                unique.append(element)
             else:
-                nums[ind:ind + 1] = ["p"]
-
-        return nums
+                nums.pop(i)
+                print(i, nums)
+            i += 1
+        return i, unique, nums
 
 
 obj = Solution()
-function = obj.remove_duplicates([1, 1, 1, 2, 3])
+function = obj.remove_duplicates([0,0,1,1,1,2,2,3,3,4])
 
 
 print(function)

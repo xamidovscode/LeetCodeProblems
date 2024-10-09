@@ -5,9 +5,19 @@ class Solution(object):
         :type nums2: List[int]
         :rtype: float
         """
-        objects = sorted(nums1 + nums2)
-        objects = objects[1:][:-1]
-        return round(sum(objects) / len(objects), 5)
+        # objects = sorted(nums1 + nums2)
+        # objects = objects[1:][:-1]
+        # return round(sum(objects) / len(objects), 5)
+        objects = [nums1 + nums2]
+        mx = max(objects[0])
+        mn = min(objects[0])
+        result = 0
+        length = 0
+        for i in objects[0]:
+            if i != mn and i != mx:
+                result += i
+                length += 1
+        return round((result / length), 5)
 
 
 obj = Solution()

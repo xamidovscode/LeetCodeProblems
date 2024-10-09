@@ -1,5 +1,4 @@
 class Solution:
-
     def longest_palindrome(self, s: str) -> str:
         length = len(s)
         i1 = 0

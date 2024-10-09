@@ -10,13 +10,15 @@ class Solution(object):
         """
         unique = []
         i = 0
-        print("First", nums)
+        poped = 0
+        print("F", nums)
         while i <= len(nums) - 1:
             element = nums[i]
             if element not in unique:
                 unique.append(element)
             else:
-                nums.pop(i)
+                nums.pop(i - poped)
+                poped += 1
                 print(i, nums)
             i += 1
         return i, unique, nums

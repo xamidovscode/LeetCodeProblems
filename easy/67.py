@@ -1,22 +1,17 @@
 
 def add_binary(a: str, b: str) -> str:
-    result = ""
-    carry = 0
-    i, j = len(a) - 1, len(b) - 1
+    a=int(a,2) # ikkilikdan 10 likka otish bo'ldi
+    b=int(b,2)
+    a = a + b
+    st =""
+    if a+b ==0: return "0"
+    while a!=0:
+        st = str(a%2)+ st
+        print(a)
+        a = a//2
 
-    while i >= 0 or j >= 0 or carry:
-        bit_a = int(a[i]) if i >= 0 else 0
-        bit_b = int(b[j]) if j >= 0 else 0
+    return st
 
-        total = bit_a + bit_b + carry
-        result = str(total % 2) + result
-        carry = total // 2
-        print(carry)
-
-        i -= 1
-        j -= 1
-
-    return result
 
 
 print(add_binary("111", "101"))

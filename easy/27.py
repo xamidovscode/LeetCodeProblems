@@ -9,7 +9,7 @@ class Solution:
                 nums.insert(index, '_')
                 k += 1
             index += 1
-        return k
+        return k, nums
 
 
 print(Solution.removeElement([3, 2, 2, 3], 3))

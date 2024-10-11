@@ -1,5 +1,6 @@
+
 def add_binary(a: str, b: str) -> str:
-    result = []
+    result = ""
     carry = 0
     i, j = len(a) - 1, len(b) - 1
 
@@ -8,13 +9,14 @@ def add_binary(a: str, b: str) -> str:
         bit_b = int(b[j]) if j >= 0 else 0
 
         total = bit_a + bit_b + carry
-        result.append(str(total % 2))
+        result = str(total % 2) + result
         carry = total // 2
+        print(carry)
 
         i -= 1
         j -= 1
 
-    return ''.join(reversed(result))
+    return result
 
 
-print(add_binary("111", "100"))
+print(add_binary("111", "101"))

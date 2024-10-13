@@ -6,10 +6,8 @@ class Solution:
         substrings = []
         for i in range(0, len(s) - 1):
             substrings.append(s[i:])
-        print(substrings)
         while i1 <= len(s) -1:
             substring1 = s[0:i1 + 1]
-            print(substring1, 11111111111111)
             if len(substring1) == 1 and len(rst) < 1:
                 rst = substring1
                 continue

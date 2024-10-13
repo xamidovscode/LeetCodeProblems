@@ -1,17 +1,18 @@
 
 class Solution:
     def longest_palindrome(self, s: str) -> str:
-        i1 = 0
         rst = ""
         substrings = []
-        for i in range(0, len(s) - 1):
+        for i in range(0, len(s)):
             substrings.append(s[i:])
+        print(substrings)
         for target in substrings:
+            i1 = 0
             while i1 <= len(target) -1:
                 substring1 = target[0:i1 + 1]
                 if len(substring1) == 1 and len(rst) < 1:
                     rst = substring1
-                    # continue
+                    continue
                 i2 = 0
                 while i2 <= len(substring1) - 1:
                     last_index = len(substring1) - 1 - i2
@@ -27,7 +28,7 @@ class Solution:
 
 
 obj = Solution()
-function = obj.longest_palindrome("qabab")
+function = obj.longest_palindrome("a")
 
 
 print(function)

@@ -1,3 +1,3 @@
-a = "11111"
+a = "salom"
 
-print(int(a,10))
+print(a[2:4])

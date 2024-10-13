@@ -2,24 +2,34 @@
 class Solution:
     def longest_palindrome(self, s: str) -> str:
         rst = ""
+        main_len = len(s)
         if all(char == s[0] for char in s):
             return s
-        for i in range(0, len(s)):
+        i0 = 0
+        while i0 <= main_len - 1:
+            last_index = main_len - 1 - i0
+            if s[i0] != s[last_index]:
+                break
+            i0 += 1
+        else:
+            return s
+        for i in range(0, main_len):
             target = s[i:]
             i1 = 0
             while i1 <= len(target) -1:
                 substring1 = target[0:i1 + 1]
-                if len(substring1) == 1 and len(rst) < 1:
+                subs1_len = len(substring1)
+                if subs1_len == 1 and len(rst) < 1:
                     rst = substring1
                     continue
                 i2 = 0
-                while i2 <= len(substring1) - 1:
-                    last_index = len(substring1) - 1 - i2
+                while i2 <= subs1_len - 1:
+                    last_index = subs1_len - 1 - i2
                     if substring1[i2] != substring1[last_index]:
                         break
                     i2 += 1
                 else:
-                    if len(rst) < len(substring1):
+                    if len(rst) < subs1_len:
                         rst = substring1
                 i1 += 1
 

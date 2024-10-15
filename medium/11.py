@@ -3,15 +3,14 @@ from typing import List
 def max_area(height: List[int]) -> int:
     result = 0
     i1 = 0
-    while i1 < len(height) - 1:
+    main_len = len(height)
+    while i1 < main_len - 1:
         obj1 = height[i1]
         i2 = i1 + 1
-        print("AAAAAAAAAAAAAAAAAAAAAAA ", obj1)
-        while i2 < len(height):
-            length = i2 + i1
+        while i2 < main_len:
+            length = i2 - i1
             obj2 = height[i2]
-            print(obj2)
-            calculated = min(obj1, obj2) * (length if length != 0 else 1)
+            calculated = (obj1 if obj1 < obj2 else obj2) * length
             if calculated > result:
                 result = calculated
             i2 += 1

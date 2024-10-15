@@ -5,11 +5,12 @@ def max_area(height: List[int]) -> int:
     i1 = 0
     while i1 < len(height) - 1:
         obj1 = height[i1]
-        objects = height[i1 + 1:]
-        i2 = 0
-        while i2 < len(objects):
+        i2 = i1 + 1
+        print("AAAAAAAAAAAAAAAAAAAAAAA ", obj1)
+        while i2 < len(height):
             length = i2 + i1
             obj2 = height[i2]
+            print(obj2)
             calculated = min(obj1, obj2) * (length if length != 0 else 1)
             if calculated > result:
                 result = calculated

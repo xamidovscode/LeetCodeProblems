@@ -19,5 +19,5 @@ def max_area(height: List[int]) -> int:
     return result
 
 
-print(max_area([2,3,4,5,18,17,6]))
+print(max_area([2,3,4,5,18,17,6,3, 4,5 ,6 ,677,3,3 ,88, 8,8,8 ,88, 8,8 ,3]))
 

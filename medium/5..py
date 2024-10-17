@@ -43,8 +43,6 @@ function = obj.longest_palindrome("321012321001232100123210012321001232100123210
 print(function)
 
 
-
-
 # # best way
 # class Solution:
 #     def longest_palindrome(self, s: str) -> str:

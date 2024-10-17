@@ -1,15 +1,14 @@
-
-a = 0
-i1 = 2
+i1 = 10000
 result = []
-while i1 <= 1000:
+
+while len(result) < 10:
     i2 = 2
-    print(i1)
-    while i2 <= i1:
-        if i2 // i1 != 0:
+    while i2 <= i1 // 2:
+        if i1 % i2 == 0:
             break
-        result.append(i1)
         i2 += 1
+    else:
+        result.append(i1)
     i1 += 1
 
 print(result)

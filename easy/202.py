@@ -12,5 +12,6 @@ def isHappy(n: int):
         if result in (5, 4):
             return False
         obj = str(result)
+        print(obj)
 
 print(isHappy(1111111))

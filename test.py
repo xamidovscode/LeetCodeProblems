@@ -1,3 +1,3 @@
-x = "salom"
+a = {"a": 1}
 
-print("s" in x)
+print(a['a'])

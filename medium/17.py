@@ -18,7 +18,6 @@ def letterCombinations(digits: str) -> List[str]:
         strs.append(numbers[i])
     for i1 in strs:
         for i2 in i1:
-            print(i1, i2)
             result.append(i1 + i2)
     return result
 

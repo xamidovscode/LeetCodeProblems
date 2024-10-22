@@ -22,5 +22,4 @@ def letterCombinations(digits: str) -> List[str]:
             result.append(i1 + i2)
     return result
 
-
 print(letterCombinations("23"))

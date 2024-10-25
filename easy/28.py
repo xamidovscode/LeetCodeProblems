@@ -7,5 +7,4 @@ class Solution(object):
 
 obj = Solution()
 function = obj.strStr('hello', 'lo')
-
 print(function)

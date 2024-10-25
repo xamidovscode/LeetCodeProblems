@@ -5,8 +5,6 @@ class Solution(object):
                 return ind
         return -1
 
-
-
 obj = Solution()
 function = obj.strStr('hello', 'lo')
 

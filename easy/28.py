@@ -1,9 +1,10 @@
 class Solution(object):
     def strStr(self, haystack, needle):
-        for num, i in enumerate(haystack):
-            if i == needle[0] and haystack[num:num + len(needle)] == needle:
-                return num
+        for ind, i in enumerate(haystack):
+            if haystack[ind:ind + len(needle)] == needle:
+                return ind
         return -1
+
 
 
 obj = Solution()

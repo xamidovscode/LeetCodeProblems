@@ -1,5 +1,3 @@
-
-
 def reverse(x: int) -> int:
     if x < 0:
         result = -int(str(abs(x))[::-1])
